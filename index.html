@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <base dir="/">
+    <title>Gigsberg</title>
+    <link href="template/style.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li>
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+            <hr />
+        </nav>
+    </header>
+
+    <section>
+        <div id="add-user-button" class="add-user-button">Add user</div>
+        <div id="modal" class="modal">
+            <div id="modal-content" class="modal-content">
+                <span class="close">&times;</span>
+                <form id="add-user" action="#" method="post">
+                    <label for="username">Username:
+                        <input type="text" id="username" name="username">
+                    </label>
+                    <span id="err-username"></span>
+                    <label for="email">Email:
+                        <input type="text" id="email" name="email">
+                    </label>
+                    <span id="err-email"></span>
+                    <label for="password">Password:
+                        <input type="password" id="password" name="password">
+                    </label>
+                    <span id="err-password"></span>
+                    <label for="birthday">Birthday:
+                        <input type="date" id="birthday" name="birthday">
+                    </label>
+                    <span id="err-birthday"></span>
+                    <label for="url">URL:
+                        <input type="text" id="url" name="url" placeholder="gigsberg.com">
+                    </label>
+                    <span id="err-url"></span>
+                    <label for="phone">Phone Number:
+                        <input type="text" id="phone" name="phone" placeholder="0503222238">
+                    </label>
+                    <span id="err-phone"></span>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="modal-delete-user" class="modal">
+            <div id="modal-content-delete-user" class="modal-content">
+                <span class="close">&times;</span>
+                <p id="user-id-delete">ID: <span></span></p>
+                <p id="username-delete">Username: <span></span></p>
+                <p id="email-delete">Email: <span></span></p>
+                <p id="birthday-delete">Birthday: <span></span></p>
+                <p id="url-delete">URL: <span></span></p>
+                <p id="phone-delete">Phone number: <span></span></p>
+                <input id="user-delete" type="submit" value="Delete user" />
+            </div>
+        </div>
+    </section>
+
+    <article class="user-list">
+        <table id="user-list">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody id="user-list-body"></tbody>
+        </table>
+    </article>
+
+    <footer class="footer">
+        <p>&copy; 2021 Gigsberg. All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="template/js.js"></script>
+</body>
+</html>
